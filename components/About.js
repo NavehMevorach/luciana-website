@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { langContext } from './../pages'
+import Image from 'next/image'
 
 function About() {
   const { isEn } = useContext(langContext)
@@ -13,25 +14,17 @@ function About() {
             : "איי שם במקום עוצר נשימה השוכן במתחם דזיין סיטי מעלה אדומים, הוקמה מסעדת שף איטלקית ושמה לוצ'נה . המסעדה מציגה קשת טעמים  יחודיים מחומרי גלם איכותיים וטריים, אשר מייצרים עבור כל אורח חוויה מדהימה מלאה בטעמים ואווירה בלתי נשכחת . אנו מזמינים אתכם להנות משטחי המסעדה המרהיבה ביופיה ולהנות מבר קוקטיילים מטעמי העולם, קירות יין ממרתף השף ורולטת הקזינו אשר הגיעה אלינו ישירות מקזינו לאס ואגס"}
         </p>
         <div className="flex flex-wrap -m-1 md:-m-2">
-          <div className="flex flex-wrap w-1/3">
+          <div className="flex flex-wrap w-1/2">
             <div className="w-full p-1 md:p-2">
               <img
                 alt="gallery"
                 className="block object-cover object-center w-full h-full rounded-lg"
-                src="/assets/food-7.jpeg"
+                src="/assets/food-10.jpeg"
               />
             </div>
           </div>
-          <div className="flex flex-wrap w-1/3">
-            <div className="w-full p-1 md:p-2">
-              <img
-                alt="gallery"
-                className="block object-cover object-center w-full h-full rounded-lg"
-                src="/assets/food-8.jpeg"
-              />
-            </div>
-          </div>
-          <div className="flex flex-wrap w-1/3">
+
+          <div className="flex flex-wrap w-1/2">
             <div className="w-full p-1 md:p-2">
               <img
                 alt="gallery"
@@ -45,7 +38,7 @@ function About() {
               <img
                 alt="gallery"
                 className="block object-cover object-center w-full h-full rounded-lg"
-                src="/assets/food-10.jpeg"
+                src="/assets/food-7.jpeg"
               />
             </div>
           </div>
