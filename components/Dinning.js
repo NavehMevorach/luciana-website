@@ -1,4 +1,5 @@
 import { useInView } from 'react-intersection-observer'
+import Image from 'next/image'
 import Button from './Button'
 
 function Dinning() {
