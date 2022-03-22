@@ -13,3 +13,121 @@
     font-family: 'Lato', system-ui, sans-serif;
   }
 }
+
+/* // element appears from blur, this class is applied to every span with a letter */
+.element-from-blur {
+  opacity: 0;
+  transition-duration: 2s;
+  will-change: opacity, filter, transform;
+}
+
+.element-from-blur-animate {
+  animation: element-from-blur-animate 1s normal forwards;
+  animation-delay: 0;
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0, 0, 0);
+  transform: translateZ(0);
+}
+
+.fadeInTop {
+  -webkit-animation: fadeInTop;
+  animation: fadeInTop 3s forwards;
+}
+
+.animation-duration-top-1,
+.animation-duration-top-11 {
+  animation-duration: 1.46747s;
+}
+.animation-duration-top-2,
+.animation-duration-top-12 {
+  animation-duration: 1.53933s;
+}
+.animation-duration-top-3,
+.animation-duration-top-13 {
+  animation-duration: 1.75153s;
+}
+.animation-duration-top-4,
+.animation-duration-top-14 {
+  animation-duration: 1.51916s;
+}
+.animation-duration-top-5,
+.animation-duration-top-15 {
+  animation-duration: 1.4816s;
+}
+.animation-duration-top-6,
+.animation-duration-top-16 {
+  animation-duration: 1.32821s;
+}
+.animation-duration-top-7 {
+  animation-duration: 1.04818s;
+}
+.animation-duration-top-8 {
+  animation-duration: 0.631792s;
+}
+.animation-duration-top-9 {
+  animation-duration: 1.18347s;
+}
+.animation-duration-top-10 {
+  animation-duration: 1.45564s;
+}
+
+.animation-duration-bottom-1,
+.animation-duration-bottom-11 {
+  animation-duration: 1.55365s;
+}
+.animation-duration-bottom-2,
+.animation-duration-bottom-12 {
+  animation-duration: 1.26815s;
+}
+.animation-duration-bottom-3,
+.animation-duration-bottom-13 {
+  animation-duration: 1.41921s;
+}
+.animation-duration-bottom-4,
+.animation-duration-bottom-14 {
+  animation-duration: 1.758089s;
+}
+.animation-duration-bottom-5,
+.animation-duration-bottom-15 {
+  animation-duration: 1.4816s;
+}
+.animation-duration-bottom-6,
+.animation-duration-bottom-16 {
+  animation-duration: 1.60849s;
+}
+.animation-duration-bottom-7 {
+  animation-duration: 0.645515s;
+}
+.animation-duration-bottom-8 {
+  animation-duration: 1.46204s;
+}
+.animation-duration-bottom-9 {
+  animation-duration: 1.29154s;
+}
+.animation-duration-bottom-10 {
+  animation-duration: 0.950954s;
+}
+
+@keyframes element-from-blur-animate {
+  from {
+    filter: blur(30px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+/* Fade it to top */
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

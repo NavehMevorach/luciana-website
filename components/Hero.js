@@ -5,6 +5,10 @@ import { FaWaze, FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 import Button from './Button'
 
+const generateKey = (pre) => {
+  return `${pre}_${new Date().getTime()}`
+}
+
 function Hero() {
   const { isEn } = useContext(langContext)
 
@@ -22,13 +26,40 @@ function Hero() {
       id="home"
       className="relative  h-screen w-screen bg-[rgba(0,0,0,0.3)] flex justify-center items-center text-center text-white">
       <div className="flex flex-col justify-center items-center">
-        <h1 className="lg:text-7xl md:text-5xl text-4xl px-2 mb-8 font-bold">
-          <span className="block md:ml-10 ml-0">
-            Luciana <span className="text-base">Dcity</span>
+        <h1
+          className={`absolute md:top-[calc(50%_-_80px)] top-[calc(50%_-_98px)] left-1/2 -translate-x-1/2 lg:text-7xl md:text-5xl text-4xl px-2 mb-8 font-bold`}>
+          {'Luciana'.split('').map((letter, ind) => (
+            <span
+              key={generateKey(ind)}
+              className={`text-white element-from-blur element-from-blur-animate animation-duration-top-${
+                ind + 1
+              }`}>
+              {letter}
+            </span>
+          ))}
+          <span className="ml-[10px]">
+            {'Dcity'.split('').map((letter, ind) => (
+              <span
+                key={generateKey(ind)}
+                className={`text-base element-from-blur element-from-blur-animate animation-duration-bottom-${
+                  ind + 1
+                }`}>
+                {letter}
+              </span>
+            ))}
           </span>
-          <span className="block">Italian House.</span>
+          <br />
+          {'Italian House'.split('').map((letter, ind) => (
+            <span
+              key={generateKey(ind)}
+              className={`text-white element-from-blur element-from-blur-animate animation-duration-top-${
+                ind + 1
+              }`}>
+              {letter}
+            </span>
+          ))}
         </h1>
-        <div className="flex space-x-4">
+        <div className="fadeInTop flex space-x-4 absolute top-[calc(50%_+_100px)]">
           <Button he="הזמנת שולחן" en="Reserve" handleClick={handleMenuClick} />
           <Button he="תפריט" en="Menu" handleClick={handleMenuClick} />
         </div>
@@ -95,6 +126,7 @@ function Hero() {
           </a>
         </div>
       </div>
+
       <video
         src="/assets/luciana.mp4"
         className={`w-screen h-screen -z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover`}

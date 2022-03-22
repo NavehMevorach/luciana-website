@@ -1,12 +1,20 @@
-import React from 'react'
+import { useInView } from 'react-intersection-observer'
 
 function Bar() {
+  const [ref, inView, entry] = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  })
   return (
     <div
       id="bar"
+      ref={ref}
       className="relative h-screen w-screen bg-bar bg-cover bg-fixed flex justify-start items-end text-center text-white p-20">
-      <div className="flex flex-col justify-center items-start text-left">
-        <h2 className="lg:text-7xl md:text-5xl text-4xl  mb-8 font-bold">
+      <div
+        className={`${
+          inView && 'fadeInTop'
+        } flex flex-col justify-center items-start text-left`}>
+        <h2 className="md:text-5xl text-4xl  mb-8 font-thin">
           <span className="block">Good Times</span>
           <span className="block">Great Vibes</span>
         </h2>
