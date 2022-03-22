@@ -9,8 +9,9 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        hero: "url('/assets/bg.jpeg')",
-        place: "url('/assets/bg-place.jpeg')",
+        bar: "url('/assets/bar.jpg')",
+        dinning: "url('/assets/dinning.jpg')",
+        food: "url('/assets/food.jpg')",
       },
     },
   },

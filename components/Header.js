@@ -46,7 +46,7 @@ function Header() {
           target="_blank"
           rel="noreferrer"
           href="https://wa.link/vrxw1u"
-          className="cursor-pointer">
+          className="cursor-pointer hover:scale-125 duration-75 ease-linear">
           <IconContext.Provider
             value={{
               color: 'white',
@@ -61,7 +61,7 @@ function Header() {
           target="_blank"
           rel="noreferrer"
           href="https://waze.com/ul?a=share_drive&locale=en&sd=ItZAHblClAGqSSq77w"
-          className="cursor-pointer">
+          className="cursor-pointer hover:scale-125 duration-75 ease-linear">
           <IconContext.Provider
             value={{
               color: 'white',
@@ -76,7 +76,7 @@ function Header() {
           target="_blank"
           rel="noreferrer"
           href="https://www.facebook.com/%D7%9C%D7%95%D7%A6%D7%A0%D7%94-Dcity-%D7%9E%D7%A2%D7%9C%D7%94-%D7%90%D7%93%D7%95%D7%9E%D7%99%D7%9D-%D7%9E%D7%A1%D7%A2%D7%93%D7%94-%D7%90%D7%99%D7%98%D7%9C%D7%A7%D7%99%D7%AA-%D7%9B%D7%A9%D7%A8%D7%94-%D7%9C%D7%9E%D7%94%D7%93%D7%A8%D7%99%D7%9F-107030365000099/"
-          className="cursor-pointer">
+          className="cursor-pointer hover:scale-125 duration-75 ease-linear">
           <IconContext.Provider
             value={{
               color: 'white',
@@ -91,7 +91,7 @@ function Header() {
           target="_blank"
           rel="noreferrer"
           href="https://www.instagram.com/luciana_dcity/"
-          className="cursor-pointer">
+          className="cursor-pointer hover:scale-125 duration-75 ease-linear">
           <IconContext.Provider
             value={{
               color: 'white',
@@ -220,7 +220,7 @@ function Header() {
           --offset: 58px;
         }
         .active {
-          background: rgba(0, 0, 0, 1);
+          background: rgba(0, 0, 0, 0.1);
         }
       `}</style>
     </div>

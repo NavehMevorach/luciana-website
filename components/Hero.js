@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { langContext } from './../pages'
 import { FaWaze, FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
+import Button from './Button'
 
 function Hero() {
   const { isEn } = useContext(langContext)
@@ -19,7 +20,7 @@ function Hero() {
   return (
     <div
       id="home"
-      className="realtive  h-screen w-screen bg-[rgba(0,0,0,0.7)] flex justify-center items-center text-center text-white">
+      className="relative  h-screen w-screen bg-[rgba(0,0,0,0.3)] flex justify-center items-center text-center text-white">
       <div className="flex flex-col justify-center items-center">
         <h1 className="lg:text-7xl md:text-5xl text-4xl px-2 mb-8 font-bold">
           <span className="block md:ml-10 ml-0">
@@ -28,14 +29,8 @@ function Hero() {
           <span className="block">Italian House.</span>
         </h1>
         <div className="flex space-x-4">
-          <button
-            onClick={handleMenuClick}
-            className="hover:bg-white hover:text-black  ease-linear duration-100 px-8 py-2 border-2 rounded">
-            {isEn ? 'Reserve' : 'הזמנת שולחן'}
-          </button>
-          <button className="hover:bg-white hover:text-black  ease-linear duration-100 px-8 py-2 border-2 rounded">
-            {isEn ? 'Menu' : 'תפריט'}
-          </button>
+          <Button he="הזמנת שולחן" en="Reserve" handleClick={handleMenuClick} />
+          <Button he="תפריט" en="Menu" handleClick={handleMenuClick} />
         </div>
         <div className="flex justify-center items-center space-x-3 md:hidden mt-10">
           <a
@@ -100,7 +95,6 @@ function Hero() {
           </a>
         </div>
       </div>
-      <div className="absolute top-0 right-0 left-0 bottom-0  bg-hero bg-cover -z-20"></div>
       <video
         src="/assets/luciana.mp4"
         className={`w-screen h-screen -z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover`}
