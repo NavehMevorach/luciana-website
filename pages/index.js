@@ -51,12 +51,12 @@ export default function Home() {
         <Bar />
         <Food openModal={openModal} closeModal={closeModal} />
         <Footer />
-        <Modal
+        {/* <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
           style={customStyles}>
           <div className="h-full w-full bg-menu bg-cover "></div>
-        </Modal>
+        </Modal> */}
       </div>
     </langContext.Provider>
   )

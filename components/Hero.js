@@ -63,7 +63,7 @@ function Hero({ openModal, closeModal }) {
           <Button he="הזמנת שולחן" en="Reserve" handleClick={handleMenuClick} />
           <Button he="תפריט" en="Menu" handleClick={openModal} />
         </div>
-        <div className="flex justify-center items-center space-x-3 md:hidden mt-10">
+        <div className="flex fadeInTop absolute top-[calc(50%_+_10px)] justify-center items-center space-x-3 md:hidden mt-10">
           <a
             target="_blank"
             rel="noreferrer"
