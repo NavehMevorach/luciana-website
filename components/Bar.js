@@ -1,10 +1,20 @@
 import { useInView } from 'react-intersection-observer'
+import { useRouter } from 'next/router'
+import Button from './Button'
 
 function Bar() {
+  const router = useRouter()
   const [ref, inView, entry] = useInView({
     triggerOnce: true,
     threshold: 0.3,
   })
+
+  const handleMenuClick = (e) => {
+    console.log('here')
+    router.push(
+      'https://tabitisrael.co.il/online-reservations/create-reservation?step=search&orgId=6146faa77f521602eed701a2'
+    )
+  }
   return (
     <div
       id="bar"
@@ -18,9 +28,7 @@ function Bar() {
           <span className="block">Good Times</span>
           <span className="block">Great Vibes</span>
         </h2>
-        <button className="hover:bg-white hover:text-black  ease-linear duration-100 px-8 py-2 border-2 rounded">
-          Order a table
-        </button>
+        <Button he="הזמנת שולחן" en="Reserve" handleClick={handleMenuClick} />
       </div>
     </div>
   )

@@ -19,7 +19,6 @@ function Dinning() {
           <span className="block">The Perfect Place</span>
           <span className="block">For Your Next Celebration.</span>
         </h2>
-        <Button he="חייגו" en="call us" />
       </div>
     </div>
   )

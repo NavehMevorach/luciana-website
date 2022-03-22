@@ -9,7 +9,7 @@ const generateKey = (pre) => {
   return `${pre}_${new Date().getTime()}`
 }
 
-function Hero() {
+function Hero({ openModal, closeModal }) {
   const { isEn } = useContext(langContext)
 
   const router = useRouter()
@@ -61,7 +61,7 @@ function Hero() {
         </h1>
         <div className="fadeInTop flex space-x-4 absolute top-[calc(50%_+_100px)]">
           <Button he="הזמנת שולחן" en="Reserve" handleClick={handleMenuClick} />
-          <Button he="תפריט" en="Menu" handleClick={handleMenuClick} />
+          <Button he="תפריט" en="Menu" handleClick={openModal} />
         </div>
         <div className="flex justify-center items-center space-x-3 md:hidden mt-10">
           <a

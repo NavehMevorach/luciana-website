@@ -12,6 +12,7 @@ module.exports = {
         bar: "url('/assets/bar.jpg')",
         dinning: "url('/assets/dinning.jpg')",
         food: "url('/assets/food.jpg')",
+        menu: "url('/assets/menu-en.png')",
       },
     },
   },
