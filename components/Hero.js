@@ -24,7 +24,7 @@ function Hero({ openModal, closeModal }) {
   return (
     <div
       id="home"
-      className="relative  h-screen w-screen bg-[rgba(0,0,0,0.3)] flex justify-center items-center text-center text-white">
+      className="relative  h-screen w-screen bg-[rgba(0,0,0,0.2)] flex justify-center items-center text-center text-white">
       <div className="flex flex-col justify-center items-center">
         <h1
           className={`absolute md:top-[calc(50%_-_80px)] top-[calc(50%_-_98px)] left-1/2 -translate-x-1/2 lg:text-7xl md:text-5xl text-4xl px-2 mb-8 font-bold`}>
