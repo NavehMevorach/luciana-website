@@ -19,7 +19,7 @@ function Bar() {
     <div
       id="bar"
       ref={ref}
-      className="relative h-screen w-screen bg-bar bg-fixed flex justify-start items-end text-center text-white p-20">
+      className="relative h-screen w-screen bg-bar bg-fixed bg-no-repeat bg-cover  flex justify-start items-end text-center text-white p-20">
       <div
         className={`${
           inView && 'fadeInTop'

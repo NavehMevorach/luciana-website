@@ -11,7 +11,7 @@ function Dinning() {
     <div
       id="dinning"
       ref={ref}
-      className="relative h-screen w-screen bg-dinning bg-fixed flex justify-start items-end text-center text-white p-20">
+      className="relative h-screen w-screen bg-dinning bg-fixed bg-no-repeat bg-cover flex justify-start items-end text-center text-white p-20">
       <div
         className={`${
           inView && 'fadeInTop'
