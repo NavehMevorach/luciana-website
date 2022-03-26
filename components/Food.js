@@ -9,7 +9,7 @@ function Food() {
     <div
       id="food"
       ref={ref}
-      className="relative h-screen w-screen bg-food bg-cover bg-fixed flex justify-start items-end text-center text-white p-20">
+      className="relative h-screen w-screen bg-food bg-fixed flex justify-start items-end text-center text-white p-20">
       <div
         className={`${
           inView && 'fadeInTop'
