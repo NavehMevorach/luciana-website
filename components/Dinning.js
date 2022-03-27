@@ -10,7 +10,7 @@ function Dinning() {
     <div
       id="dinning"
       ref={ref}
-      className="relative h-screen flex items-end text-center text-white p-20">
+      className="section-image-container flex items-end text-center text-white p-20">
       <div
         className={`${
           inView && 'fadeInTop'
@@ -20,14 +20,27 @@ function Dinning() {
           <span className="block">For Your Next Celebration.</span>
         </h2>
       </div>
-      <Image
-        className="relative -z-10"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-        src="/assets/dinning.jpg"
-        alt="bar"
-      />
+      <img className="section-image" src="/assets/dinning.jpg" alt="bar" />
+
+      <style jsx>
+        {`
+          .section-image-container {
+            width: 100vw;
+            height: 100vh;
+            clip-path: inset(0);
+          }
+
+          .section-image {
+            object-fit: cover;
+            position: fixed !important;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+          }
+        `}
+      </style>
     </div>
   )
 }
