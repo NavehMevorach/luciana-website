@@ -140,7 +140,7 @@ function Hero({ openModal, closeModal }) {
         autoPlay
         muted
         loop
-        playsinline>
+        playsInline>
         <source src="/assets/luciana.mp4" type="video/mp4" />
       </video>
     </div>

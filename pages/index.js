@@ -39,7 +39,7 @@ export default function Home() {
   }
   return (
     <langContext.Provider value={{ isEn, updateLang }}>
-      <div id="modal" className="overflow-x-hidden">
+      <div id="modal" className="overflow-x-hidden relative">
         <Head>
           <title>Luciana Dcity Italian House.</title>
           <meta name="description" content="Luciana Dcity Italian House." />

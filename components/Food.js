@@ -1,4 +1,5 @@
 import { useInView } from 'react-intersection-observer'
+import Image from 'next/image'
 
 function Food() {
   const [ref, inView, entry] = useInView({
@@ -9,7 +10,7 @@ function Food() {
     <div
       id="food"
       ref={ref}
-      className="h-screen  bg-food bg-fixed bg-no-repeat bg-cover flex items-end text-center text-white p-20">
+      className="relative h-screen  flex items-end text-center text-white p-20">
       <div
         className={`${
           inView && 'fadeInTop'
@@ -22,6 +23,14 @@ function Food() {
           Menu
         </button>
       </div>
+      <Image
+        className="relative -z-10"
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+        src="/assets/food.jpg"
+        alt="bar"
+      />
     </div>
   )
 }

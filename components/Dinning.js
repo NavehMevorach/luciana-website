@@ -1,6 +1,5 @@
 import { useInView } from 'react-intersection-observer'
 import Image from 'next/image'
-import Button from './Button'
 
 function Dinning() {
   const [ref, inView, entry] = useInView({
@@ -11,7 +10,7 @@ function Dinning() {
     <div
       id="dinning"
       ref={ref}
-      className="h-screen bg-dinning bg-fixed bg-no-repeat bg-cover flex items-end text-center text-white p-20">
+      className="relative h-screen flex items-end text-center text-white p-20">
       <div
         className={`${
           inView && 'fadeInTop'
@@ -21,6 +20,14 @@ function Dinning() {
           <span className="block">For Your Next Celebration.</span>
         </h2>
       </div>
+      <Image
+        className="relative -z-10"
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+        src="/assets/dinning.jpg"
+        alt="bar"
+      />
     </div>
   )
 }
