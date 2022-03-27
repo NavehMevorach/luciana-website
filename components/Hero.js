@@ -127,13 +127,22 @@ function Hero({ openModal, closeModal }) {
         </div>
       </div>
 
-      <video
+      {/* <video
         src="/assets/luciana.mp4"
         className={`w-screen h-screen -z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover`}
         autoPlay
         loop
         playsinline
-        muted></video>
+        muted></video> */}
+
+      <video
+        className={`w-screen h-screen -z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover`}
+        autoplay
+        muted
+        loop
+        playsinline>
+        <source src="/assets/luciana.mp4" type="video/mp4" />
+      </video>
     </div>
   )
 }
