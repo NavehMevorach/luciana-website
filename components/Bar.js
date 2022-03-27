@@ -1,5 +1,6 @@
 import { useInView } from 'react-intersection-observer'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 import Button from './Button'
 
 function Bar() {
@@ -19,7 +20,7 @@ function Bar() {
     <div
       id="bar"
       ref={ref}
-      className="h-screen bg-bar bg-fixed bg-no-repeat bg-cover flex items-end text-center text-white p-20">
+      className="relative h-screen flex items-end text-center text-white p-20">
       <div
         className={`${
           inView && 'fadeInTop'
@@ -30,6 +31,14 @@ function Bar() {
         </h2>
         <Button he="הזמנת שולחן" en="Reserve" handleClick={handleMenuClick} />
       </div>
+      <Image
+        className="relative -z-10"
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+        src="/assets/bar.jpg"
+        alt="bar"
+      />
     </div>
   )
 }
