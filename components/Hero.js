@@ -4,7 +4,7 @@ import { langContext } from './../pages'
 import { FaWaze, FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 import Button from './Button'
-import VideoEmbeded from './VideoEmbeded'
+import Video from './Video'
 
 const generateKey = (pre) => {
   return `${pre}_${new Date().getTime()}`
@@ -134,7 +134,7 @@ function Hero({ openModal, closeModal }) {
         loop
         playsinline
         muted></video> */}
-      <VideoEmbeded />
+      <Video />
     </div>
   )
 }
