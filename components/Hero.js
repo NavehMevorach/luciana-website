@@ -127,7 +127,6 @@ function Hero({ openModal, closeModal }) {
           </a>
         </div>
       </div>
-
       {/* <video
         src="/assets/luciana.mp4"
         className={`w-screen h-screen -z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover`}
@@ -136,13 +135,6 @@ function Hero({ openModal, closeModal }) {
         playsinline
         muted></video> */}
       <VideoEmbeded />
-      {/* <video
-        className={`w-screen h-screen -z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover`}
-        autoPlay
-        loop
-        playsInline>
-        <source src="/assets/luciana.mp4" type="video/mp4" />
-      </video> */}
     </div>
   )
 }
