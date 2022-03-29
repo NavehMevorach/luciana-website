@@ -7,14 +7,7 @@ module.exports = {
     container: {
       center: true,
     },
-    extend: {
-      backgroundImage: {
-        bar: "url('/assets/bar.jpg')",
-        dinning: "url('/assets/dinning.jpg')",
-        food: "url('/assets/food.jpg')",
-        menu: "url('/assets/menu-en.png')",
-      },
-    },
+    extend: {},
   },
   plugins: [],
 }

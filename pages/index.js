@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Image from 'next/image'
 import Modal from 'react-modal'
 import Head from 'next/head'
 import Header from '../components/Header'
@@ -7,14 +8,28 @@ import Food from '../components/Food'
 import Footer from '../components/Footer'
 import Dinning from '../components/Dinning'
 import Bar from '../components/Bar'
+import useWindowDimensions from './../hooks/useWindowDimensions'
 
 const customStyles = {
   content: {
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    height: '90%',
+    position: 'absolute',
+    backgroundColor: '#FFF',
+    padding: '15px',
+    zIndex: '1000',
     width: '90%',
+    borderRadius: '.5em',
+  },
+  overlay: {
+    position: 'fixed',
+    display: 'flex',
+    justifyContent: 'center',
+    top: '0',
+    left: '0',
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(0,0,0, .8)',
+    zIndex: '1000',
+    overflowY: 'auto',
   },
 }
 
@@ -25,6 +40,7 @@ export const langContext = React.createContext()
 export default function Home() {
   const [isEn, setIsEn] = useState(true)
   const [modalIsOpen, setIsOpen] = useState(false)
+  const { width } = useWindowDimensions()
 
   function openModal() {
     setIsOpen(true)
@@ -39,7 +55,7 @@ export default function Home() {
   }
   return (
     <langContext.Provider value={{ isEn, updateLang }}>
-      <div id="modal" className="overflow-x-hidden relative">
+      <div id="modal" className="overflow-hidden relative">
         <Head>
           <title>Luciana Dcity Italian House.</title>
           <meta name="description" content="Luciana Dcity Italian House." />
@@ -51,12 +67,34 @@ export default function Home() {
         <Bar />
         <Food openModal={openModal} closeModal={closeModal} />
         <Footer />
-        {/* <Modal
+        <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
           style={customStyles}>
-          <div className="h-full w-full bg-menu bg-cover "></div>
-        </Modal> */}
+          <div className="relative m-h-[1000px] h-full w-full overflow-y-scroll">
+            {isEn ? (
+              <Image
+                layout="fill"
+                objectFit={width >= 750 ? 'fill' : ' cover'}
+                quality={100}
+                src={
+                  width >= 750 ? '/assets/menu-en.png' : '/assets/Menu_en_m.png'
+                }
+                alt="Menu"
+              />
+            ) : (
+              <Image
+                layout="fill"
+                objectFit={width >= 750 ? 'fill' : ' cover'}
+                quality={100}
+                src={
+                  width >= 750 ? '/assets/menu-he.png' : '/assets/Menu_he_m.png'
+                }
+                alt="Menu"
+              />
+            )}
+          </div>
+        </Modal>
       </div>
     </langContext.Provider>
   )

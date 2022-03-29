@@ -1,7 +1,7 @@
 import { useInView } from 'react-intersection-observer'
-import Image from 'next/image'
+import Button from './Button'
 
-function Food() {
+function Food({ openModal }) {
   const [ref, inView, entry] = useInView({
     triggerOnce: true,
     threshold: 0.3,
@@ -16,12 +16,10 @@ function Food() {
           inView && 'fadeInTop'
         } flex flex-col justify-center items-start text-left`}>
         <h2 className="text-4xl mb-8 font-thin max-w-[600px]">
-          Our chef offers a wide variety of delicious Italian recipes - from
-          classic pastas to authentic desserts
+          Our chef offers a wide variety of delicious Italian recipes
         </h2>
-        <button className="hover:bg-white hover:text-black  ease-linear duration-100 px-8 py-2 border-2 rounded">
-          Menu
-        </button>
+
+        <Button he="תפריט" en="Menu" handleClick={openModal} />
       </div>
       <img className="section-image" src="/assets/food.jpg" alt="bar" />
 

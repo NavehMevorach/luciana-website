@@ -1,11 +1,19 @@
 import { useInView } from 'react-intersection-observer'
-import Image from 'next/image'
+import { useRouter } from 'next/router'
+import Button from './Button'
 
 function Dinning() {
+  const router = useRouter()
+
   const [ref, inView, entry] = useInView({
     triggerOnce: true,
     threshold: 0.3,
   })
+
+  const handleMoreInfoClick = (e) => {
+    console.log('here')
+    router.push('https://wa.link/vrxw1u')
+  }
   return (
     <div
       id="dinning"
@@ -15,10 +23,15 @@ function Dinning() {
         className={`${
           inView && 'fadeInTop'
         } flex flex-col justify-center items-start text-left`}>
-        <h2 className="md:text-5xl text-4xl  mb-8 font-thin max-w-[400px]">
+        <h2 className="text-4xl  mb-8 font-thin max-w-[400px]">
           <span className="block">The Perfect Place</span>
           <span className="block">For Your Next Celebration.</span>
         </h2>
+        <Button
+          he="פרטים נוספים"
+          en="Contact"
+          handleClick={handleMoreInfoClick}
+        />
       </div>
       <img className="section-image" src="/assets/dinning.jpg" alt="bar" />
 
