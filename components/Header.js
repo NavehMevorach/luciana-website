@@ -145,8 +145,11 @@ function Header() {
               Food Truck
             </a>
           </Link>
-          <a className="text-white font-head cursor-pointer ease-in duration-100 hover:scale-125">
-            {isEn ? 'Gift Card' : 'כרטיס מתנה'}
+          <a
+            href="https://buyme.co.il/affl/supplier/7018171/order?aff=20395675"
+            target="_blank"
+            className="text-white font-head cursor-pointer ease-in duration-100 hover:scale-125">
+            BuyMe Gift Card
           </a>
           <a
             href="mailto: luciana.d.city@gmail.com"
