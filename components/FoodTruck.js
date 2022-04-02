@@ -2,7 +2,7 @@ import { useInView } from 'react-intersection-observer'
 import { useRouter } from 'next/router'
 import Button from './Button'
 
-function Dinning() {
+function FoodTruck() {
   const router = useRouter()
 
   const [ref, inView, entry] = useInView({
@@ -16,7 +16,7 @@ function Dinning() {
   }
   return (
     <div
-      id="events"
+      id="food-truck"
       ref={ref}
       className="section-image-container flex items-end text-center text-white p-20">
       <div
@@ -24,8 +24,8 @@ function Dinning() {
           inView && 'fadeInTop'
         } flex flex-col justify-center items-start text-left`}>
         <h2 className="text-4xl  mb-8 font-thin max-w-[400px]">
-          <span className="block">The Perfect Place</span>
-          <span className="block">For Your Next Celebration.</span>
+          <span className="block">Can't come to us?</span>
+          <span className="block">We will come to you!</span>
         </h2>
         <Button
           he="פרטים נוספים"
@@ -33,7 +33,11 @@ function Dinning() {
           handleClick={handleMoreInfoClick}
         />
       </div>
-      <img className="section-image" src="/assets/dinning.jpg" alt="bar" />
+      <img
+        className="section-image"
+        src="/assets/food-truck.jpg"
+        alt="food-truck"
+      />
 
       <style jsx>
         {`
@@ -58,4 +62,4 @@ function Dinning() {
   )
 }
 
-export default Dinning
+export default FoodTruck

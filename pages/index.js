@@ -9,6 +9,7 @@ import Footer from '../components/Footer'
 import Dinning from '../components/Dinning'
 import Bar from '../components/Bar'
 import useWindowDimensions from './../hooks/useWindowDimensions'
+import FoodTruck from '../components/FoodTruck'
 
 const customStyles = {
   content: {
@@ -65,32 +66,25 @@ export default function Home() {
         <Hero openModal={openModal} closeModal={closeModal} />
         <Dinning />
         <Bar />
+        <FoodTruck />
         <Food openModal={openModal} closeModal={closeModal} />
         <Footer />
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
           style={customStyles}>
-          <div className="relative m-h-[1000px] h-full w-full overflow-y-scroll">
+          <div className="m-h-[1000px] h-full w-full overflow-y-scroll">
             {isEn ? (
-              <Image
-                layout="fill"
-                objectFit={width >= 750 ? 'fill' : ' cover'}
-                quality={100}
+              <img
                 src={
                   width >= 750 ? '/assets/menu-en.png' : '/assets/Menu_en_m.png'
                 }
-                alt="Menu"
               />
             ) : (
-              <Image
-                layout="fill"
-                objectFit={width >= 750 ? 'fill' : ' cover'}
-                quality={100}
+              <img
                 src={
                   width >= 750 ? '/assets/menu-he.png' : '/assets/Menu_he_m.png'
                 }
-                alt="Menu"
               />
             )}
           </div>
