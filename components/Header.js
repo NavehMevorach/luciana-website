@@ -148,6 +148,7 @@ function Header() {
           <a
             href="https://buyme.co.il/affl/supplier/7018171/order?aff=20395675"
             target="_blank"
+            rel="noreferrer"
             className="text-white font-head cursor-pointer ease-in duration-100 hover:scale-125">
             BuyMe Gift Card
           </a>
