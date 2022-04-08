@@ -11,7 +11,6 @@ function FoodTruck() {
   })
 
   const handleMoreInfoClick = (e) => {
-    console.log('here')
     router.push('https://wa.link/vrxw1u')
   }
   return (
@@ -23,10 +22,11 @@ function FoodTruck() {
         className={`${
           inView && 'fadeInTop'
         } flex flex-col justify-center items-start text-left`}>
-        <h2 className="text-4xl  mb-8 font-thin max-w-[400px]">
-          <span className="block">Can't come to us?</span>
+        <h2 className="text-4xl mb-8 font-thin max-w-[400px]">
+          <span className="block">Can&apos;t come to us?</span>
           <span className="block">We will come to you!</span>
         </h2>
+
         <Button
           he="פרטים נוספים"
           en="Contact"
@@ -36,7 +36,7 @@ function FoodTruck() {
       <img
         className="section-image"
         src="/assets/food-truck.jpg"
-        alt="food-truck"
+        alt="foodTruck"
       />
 
       <style jsx>
@@ -46,7 +46,6 @@ function FoodTruck() {
             height: 100vh;
             clip-path: inset(0);
           }
-
           .section-image {
             object-fit: cover;
             position: fixed !important;
