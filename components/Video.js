@@ -5,7 +5,8 @@ const isSafari = () => {
   return ua.indexOf('safari') > -1 && ua.indexOf('chrome') < 0
 }
 
-const mainVideo = '/assets/luciana.mp4'
+const mainVideo =
+  'https://res.cloudinary.com/joinshelf/video/upload/v1650876909/luciana_e1vp7u.mp4'
 
 export default function Video() {
   const videoParentRef = useRef()

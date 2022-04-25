@@ -4,6 +4,7 @@ import { langContext } from './../pages'
 import { FaWaze, FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 import Button from './Button'
+import CloudinaryVideo from './CloudinaryVideo'
 import Video from './Video'
 
 const generateKey = (pre) => {
@@ -127,14 +128,8 @@ function Hero({ openModal, closeModal }) {
           </a>
         </div>
       </div>
-      {/* <video
-        src="/assets/luciana.mp4"
-        className={`w-screen h-screen -z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover`}
-        autoPlay
-        loop
-        playsinline
-        muted></video> */}
       <Video />
+      {/* <CloudinaryVideo /> */}
     </div>
   )
 }
